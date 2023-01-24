@@ -11,13 +11,22 @@ async function doIt() {
 
   const testConnect: AuthEntity = {
     firstName: 'John',
-    email: 'marcus+1@piefi.io',
+    email: 'marcus+50@piefi.io',
     lastName: 'Elway',
-    username: 'elway_123465',
-    externalId: `ABC-DEF-GHI`
+    externalId: `ABC-DEF-GHI`,
+    address: {
+      city: 'Salt Lake City',
+      country: 'US',
+      line1: '244 W 300 N',
+      postalCode: '84045',
+      state: 'UT'
+    }
   }
-  const result = await connect.userConnect(testConnect).catch((err) => console.log(err))
+  const result = await connect.userConnect(testConnect);
   console.log(result)
+
+  const pointEvent = await connect.distributePoints({amount: 15, externalId: `ABC-DEF-GHI`});
+  console.log(pointEvent);
 }
 
 doIt()
