@@ -1,5 +1,5 @@
 # PieFi Connect Typescript SDK
-More robust documentation is in the works! Hang tight and hop our discord: https://discord.gg/upsidecoop
+More robust documentation is in the works! Hang tight and hop in our discord: https://discord.gg/upsidecoop
 
 ## 📖 Documentation
 Visit our developer documentation to learn how to build using the PieFi Connect SDK.
