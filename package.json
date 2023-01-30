@@ -1,13 +1,13 @@
 {
   "name": "@piefi/piefi-connect-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.ts",
   "repository": "https://github.com/pieFi-platform/piefi-connect-sdk",
   "scripts": {
     "start": "nodemon test.ts",
     "dry-run": "npm publish --dry-run",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "nodemon": "nodemon"
   },
   "author": "",
