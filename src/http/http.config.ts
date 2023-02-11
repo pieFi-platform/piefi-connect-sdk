@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import PieFiConnectEnvironment from "../models/environments.enum";
 import IHttpConfig from "./http.config.interface";
 
 class HttpConfig implements IHttpConfig {
@@ -6,11 +7,11 @@ class HttpConfig implements IHttpConfig {
   private companyId: string;
   private axiosInstance: AxiosInstance;
 
-  constructor(apiKey: string, companyId: string) {
+  constructor(apiKey: string, companyId: string, env?: PieFiConnectEnvironment) {
     this.apiKey = apiKey;
     this.companyId = companyId;
     this.axiosInstance = axios.create({
-      baseURL: 'https://connect-dev-api.upside.coop/'
+      baseURL: env || 'https://connect-dev-api.upside.coop/'
     });
     this.axiosInstance.interceptors.request.use(this.injectToken, (error) => Promise.reject(error));
   }
