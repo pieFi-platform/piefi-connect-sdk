@@ -1,11 +1,12 @@
 {
   "name": "@piefi/piefi-connect-sdk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.ts",
   "repository": "https://github.com/pieFi-platform/piefi-connect-sdk",
   "scripts": {
-    "start": "nodemon test.ts",
+    "test:user": "nodemon testing-user.ts",
+    "test:points": "nodemon testing-points.ts",
     "dry-run": "npm publish --dry-run",
     "test": "echo \"Error: no test specified\"",
     "nodemon": "nodemon"
@@ -13,11 +14,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@piefi/piefi-connect-sdk": "^0.0.3"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "axios": "^1.2.1",
     "dotenv": "^16.0.1",
-    "@types/node": "^18.11.9",
     "nodemon": "^2.0.20"
   }
 }

@@ -1,9 +1,9 @@
 interface PointResponse {
-  amount: number;
-  daoId: string;
-  event: string;
   recipientUserId: string;
-  metadata: any;
+  dateQueue: Date;
+  linkedIds: {
+    patronageActivityId?: string;
+  }
 }
 
 export default PointResponse;

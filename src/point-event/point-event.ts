@@ -1,10 +1,10 @@
-import HttpConfig from "../http/http.config";
+import IHttpConfig from "../http/http.config.interface";
 import PointEvent from "./entities/point-event";
 import PointResponse from "./entities/point-response";
 
 class PieFiConnectPointEvent {
-  private httpModule: HttpConfig;
-  constructor(httpModule: HttpConfig){
+  private httpModule: IHttpConfig;
+  constructor(httpModule: IHttpConfig){
     this.httpModule = httpModule;
   }
 

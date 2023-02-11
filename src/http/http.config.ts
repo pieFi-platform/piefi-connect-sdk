@@ -1,16 +1,16 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-import PieFiConnectEnv from "./environments";
+import IHttpConfig from "./http.config.interface";
 
-class HttpConfig {
+class HttpConfig implements IHttpConfig {
   private apiKey: string;
   private companyId: string;
   private axiosInstance: AxiosInstance;
 
-  constructor(apiKey: string, companyId: string, env = PieFiConnectEnv.local) {
+  constructor(apiKey: string, companyId: string) {
     this.apiKey = apiKey;
     this.companyId = companyId;
     this.axiosInstance = axios.create({
-      baseURL: env,
+      baseURL: 'https://connect-dev-api.upside.coop/'
     });
     this.axiosInstance.interceptors.request.use(this.injectToken, (error) => Promise.reject(error));
   }
@@ -28,13 +28,11 @@ class HttpConfig {
   };
 
   public post = async <T>(url: string, data: any) => {
-
     const response = await this.axiosInstance.post<T>(url, data);
     return response.data;
   }
 
   public get = async <T>(url: string = '') => {
-
     const response = await this.axiosInstance.get<T>(url);
     return response.data;
   }
