@@ -1,5 +1,5 @@
 interface PointEvent {
-  amount: number;
+  amount?: number;
   externalId: string;
   eventId?: string;
 }
