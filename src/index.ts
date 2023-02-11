@@ -18,7 +18,7 @@ class PieFiConnect {
   constructor(apiKey: string, companyId: string, options?: ConfigOptions) {
     this.apiKey = apiKey;
     this.companyId = companyId;
-    this.httpModule = new HttpConfig(this.apiKey, this.companyId);
+    this.httpModule = new HttpConfig(this.apiKey, this.companyId, options?.environment);
     this.authModule = options?.testMode ? new MockPieFiConnectAuth(this.httpModule) : new PieFiConnectAuth(this.httpModule)
     this.pointModule =  options?.testMode ? new MockPieFiConnectPointEvent(this.httpModule) : new PieFiConnectPointEvent(this.httpModule)
   }
