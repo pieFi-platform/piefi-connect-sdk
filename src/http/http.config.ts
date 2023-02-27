@@ -11,7 +11,7 @@ class HttpConfig implements IHttpConfig {
     this.apiKey = apiKey;
     this.companyId = companyId;
     this.axiosInstance = axios.create({
-      baseURL: env || 'https://connect-dev-api.upside.coop/'
+      baseURL: env || PieFiConnectEnvironment.prod
     });
     this.axiosInstance.interceptors.request.use(this.injectToken, (error) => Promise.reject(error));
   }
