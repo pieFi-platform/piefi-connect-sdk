@@ -1,9 +1,9 @@
 import IHttpConfig from "../http/http.config.interface";
 import AuthEntity from "./entities/auth.entity";
-import IPieFiConnectAuth from "./entities/auth.module.interface";
+import IAwsmConnectAuth from "./entities/auth.module.interface";
 import AuthResponse from "./entities/auth.response";
 
-class PieFiConnectAuth implements IPieFiConnectAuth {
+class PieFiConnectAuth implements IAwsmConnectAuth {
   private httpModule: IHttpConfig;
   constructor(httpModule: IHttpConfig){
     this.httpModule = httpModule;

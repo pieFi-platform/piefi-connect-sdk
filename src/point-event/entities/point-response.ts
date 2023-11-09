@@ -1,4 +1,4 @@
-interface PointResponse {
+interface BitResponse {
   recipientUserId: string;
   dateQueue: Date;
   linkedIds: {
@@ -6,4 +6,4 @@ interface PointResponse {
   }
 }
 
-export default PointResponse;
+export default BitResponse;

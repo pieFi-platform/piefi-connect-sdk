@@ -1,18 +1,18 @@
 import { AuthEntity, AuthResponse, MockPieFiConnectAuth, PieFiConnectAuth } from './auth';
-import IPieFiConnectAuth from './auth/entities/auth.module.interface';
+import IAwsmConnectAuth from './auth/entities/auth.module.interface';
 import HttpConfig from './http/http.config';
 import IHttpConfig from './http/http.config.interface';
 import ConfigOptions from './models/config-options.interface';
-import { MockPieFiConnectPointEvent, PieFiConnectPointEvent, PointEvent, PointResponse } from './point-event';
-import IPieFiConnectPointEvent from './point-event/entities/point-event.module.interface';
+import { MockPieFiConnectPointEvent, PieFiConnectPointEvent, BitEvent, BitResponse } from './point-event';
+import IAwsmConnectPointEvent from './point-event/entities/point-event.module.interface';
 
 
 
-class PieFiConnect {
+class AwsmConnect {
   private apiKey: string;
   private companyId: string;
-  private authModule: IPieFiConnectAuth;
-  private pointModule: IPieFiConnectPointEvent;
+  private authModule: IAwsmConnectAuth;
+  private pointModule: IAwsmConnectPointEvent;
   private httpModule: IHttpConfig;
 
   constructor(apiKey: string, companyId: string, options?: ConfigOptions) {
@@ -23,12 +23,9 @@ class PieFiConnect {
     this.pointModule =  options?.testMode ? new MockPieFiConnectPointEvent(this.httpModule) : new PieFiConnectPointEvent(this.httpModule)
   }
 
-
-    /**
+  /**
    * @description Performs the following:
-   *  1. Creates user in UpsideCOOP
-   *  2. Puts the user inside the company COOP
-   *  3. Puts the user inside the company COOP's main room
+   *  1. Puts the user inside the company COOP
    * 
    * @param auth {@link AuthEntity}
    * @returns {link AuthResponse}
@@ -41,14 +38,14 @@ class PieFiConnect {
 
   /**
    * @description Rewards points to the dao membership
-   * @param data {@link PointEvent}
-   * @returns {Promise<PointResponse>}
+   * @param data {@link BitEvent}
+   * @returns {Promise<BitResponse>}
    */
-  async distributePoints(data: PointEvent): Promise<PointResponse> {
+  async distributePoints(data: BitEvent): Promise<BitResponse> {
     const pointResponse = await this.pointModule.rewardPoints(data);
 
     return pointResponse;
   }
 }
 
-export default PieFiConnect;
+export default AwsmConnect;

@@ -1,8 +1,8 @@
-enum PieFiConnectEnvironment {
+enum AwsmConnectEnvironment {
   local='http://localhost:3001/',
-  dev='https://connect-dev-api.upside.coop/',
-  staging='https://connect-staging-api.upside.coop/',
-  prod='https://connect-api.upside.coop/'
+  dev='https://connect-dev-api.awsm.com/',
+  staging='https://connect-staging-api.awsm.com/',
+  prod='https://connect-api.awsm.com/'
 }
 
-export default PieFiConnectEnvironment;
+export default AwsmConnectEnvironment;

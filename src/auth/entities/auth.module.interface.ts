@@ -1,8 +1,8 @@
 import AuthEntity from "./auth.entity";
 import AuthResponse from "./auth.response";
 
-interface IPieFiConnectAuth {
+interface IAwsmConnectAuth {
   connect: (auth: AuthEntity) => Promise<AuthResponse>
 }
 
-export default IPieFiConnectAuth;
+export default IAwsmConnectAuth;

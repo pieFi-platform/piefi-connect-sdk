@@ -1,8 +1,8 @@
-import PieFiConnectEnvironment from "./environments.enum";
+import AwsmConnectEnvironment from "./environments.enum";
 
 interface ConfigOptions {
   testMode?: boolean;
-  environment?: PieFiConnectEnvironment;
+  environment?: AwsmConnectEnvironment;
 }
 
 export default ConfigOptions;

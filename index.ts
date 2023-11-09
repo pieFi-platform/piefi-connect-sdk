@@ -1,15 +1,12 @@
-import PieFiConnect from './src'
-import { PointEvent, PointResponse } from './src/point-event'
-import { Address, AuthEntity, AuthResponse } from './src/auth'
+import AwsmConnect from './src';
+import { AuthEntity, AuthResponse } from './src/auth';
 import PieFiConnectEnvironment from './src/models/environments.enum';
+import { BitEvent, BitResponse } from './src/point-event';
 
-export default PieFiConnect;
+export default AwsmConnect;
 
 export {
-  PointEvent,
-  PointResponse,
   AuthEntity,
-  AuthResponse,
-  Address,
-  PieFiConnectEnvironment
-}
+  AuthResponse, BitEvent,
+  BitResponse, PieFiConnectEnvironment
+};

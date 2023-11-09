@@ -1,8 +1,8 @@
-import PointEvent from "./point-event";
-import PointResponse from "./point-response";
+import BitEvent from "./point-event";
+import BitResponse from "./point-response";
 
-interface IPieFiConnectPointEvent {
-  rewardPoints: (data: PointEvent) => Promise<PointResponse>
+interface IAwsmConnectPointEvent {
+  rewardPoints: (data: BitEvent) => Promise<BitResponse>
 }
 
-export default IPieFiConnectPointEvent;
+export default IAwsmConnectPointEvent;

@@ -1,7 +1,7 @@
-interface PointEvent {
+interface BitEvent {
   amount?: number;
   externalId: string;
   eventId?: string;
 }
 
-export default PointEvent;
+export default BitEvent;

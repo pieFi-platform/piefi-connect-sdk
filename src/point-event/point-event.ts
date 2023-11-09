@@ -1,6 +1,6 @@
 import IHttpConfig from "../http/http.config.interface";
-import PointEvent from "./entities/point-event";
-import PointResponse from "./entities/point-response";
+import BitEvent from "./entities/point-event";
+import BitResponse from "./entities/point-response";
 
 class PieFiConnectPointEvent {
   private httpModule: IHttpConfig;
@@ -8,8 +8,8 @@ class PieFiConnectPointEvent {
     this.httpModule = httpModule;
   }
 
-  public async rewardPoints(data: PointEvent) {
-    const result = await this.httpModule.post<PointResponse>('points', data);
+  public async rewardPoints(data: BitEvent) {
+    const result = await this.httpModule.post<BitResponse>('points', data);
     return result;
   }
 }
