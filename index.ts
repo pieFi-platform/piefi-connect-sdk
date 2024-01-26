@@ -5,7 +5,7 @@ import { BitEvent, BitResponse } from './src/point-event';
 
 export default AwsmConnect;
 
-export {
+export type {
   AuthEntity,
   AuthResponse, BitEvent,
   BitResponse, PieFiConnectEnvironment
