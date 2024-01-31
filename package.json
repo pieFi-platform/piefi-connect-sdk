@@ -1,20 +1,24 @@
 {
   "name": "@piefi/awsm-connect-sdk",
   "version": "1.0.3",
-  "description": "",
-  "main": "index.ts",
+  "description": "AWSM Connect SDK",
+  "main": "dist/index.js",
   "repository": "https://github.com/pieFi-platform/piefi-connect-sdk",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "test:user": "nodemon testing-user.ts",
-    "test:points": "nodemon testing-points.ts",
     "dry-run": "npm publish --dry-run",
-    "test": "echo \"Error: no test specified\"",
-    "nodemon": "nodemon"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1"
+  },
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "axios": "^1.2.1"
-  }
+    "typescript": "^4.x"
+  },
+  "engines": {"node": ">=14"}
 }
