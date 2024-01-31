@@ -8,7 +8,7 @@ class ConnectPointEvent {
     this.httpModule = httpModule;
   }
 
-  public async rewardPoints(data: BitEvent) {
+  public async create(data: BitEvent) {
     const result = await this.httpModule.post<BitResponse>('points', data);
     return result;
   }

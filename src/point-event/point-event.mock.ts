@@ -11,7 +11,7 @@ class MockConnectPointEvent implements IConnectPointEvent {
     this.httpModule = httpModule;
   }
 
-  public async rewardPoints(data: BitEvent): Promise<BitResponse> {
+  public async create(data: BitEvent): Promise<BitResponse> {
     return new Promise((res, rej) => {
       res({
         dateQueue: new Date(),
