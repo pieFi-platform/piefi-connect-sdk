@@ -1,8 +1,8 @@
-import AwsmConnectEnvironment from "./environments.enum";
+import ConnectEnvironment from "./environments.enum";
 
 interface ConfigOptions {
   testMode?: boolean;
-  environment?: AwsmConnectEnvironment;
+  environment?: ConnectEnvironment;
 }
 
 export default ConfigOptions;
