@@ -1,9 +1,10 @@
 import IHttpConfig from "../http/http.config.interface";
 import AuthEntity from "./entities/auth.entity";
-import IAwsmConnectAuth from "./entities/auth.module.interface";
+import IConnectUser from "./entities/user.module.interface";
 import AuthResponse from "./entities/auth.response";
+import UserResponse from "./entities/user.response";
 
-class PieFiConnectAuth implements IAwsmConnectAuth {
+class AwsmConnectUser implements IConnectUser {
   private httpModule: IHttpConfig;
   constructor(httpModule: IHttpConfig){
     this.httpModule = httpModule;
@@ -13,6 +14,11 @@ class PieFiConnectAuth implements IAwsmConnectAuth {
     const result: AuthResponse = await this.httpModule.post<AuthResponse>('users', auth);
     return result;
   }
+
+  public async getByExternalId(externalId: string): Promise<UserResponse | undefined> {
+    const result = await this.httpModule.get<UserResponse | undefined>(`users/${externalId}`);
+    return result;
+  }
 }
 
-export default PieFiConnectAuth;
+export default AwsmConnectUser;

@@ -1,11 +1,11 @@
 import { randomUUID } from "crypto";
 import IHttpConfig from "../http/http.config.interface";
 import BitEvent from "./entities/point-event";
-import IAwsmConnectPointEvent from "./entities/point-event.module.interface";
+import IConnectPointEvent from "./entities/point-event.module.interface";
 import BitResponse from "./entities/point-response";
 
 
-class MockPieFiConnectPointEvent implements IAwsmConnectPointEvent {
+class MockConnectPointEvent implements IConnectPointEvent {
   private httpModule: IHttpConfig;
   constructor(httpModule: IHttpConfig) {
     this.httpModule = httpModule;
@@ -24,4 +24,4 @@ class MockPieFiConnectPointEvent implements IAwsmConnectPointEvent {
   }
 }
 
-export default MockPieFiConnectPointEvent;
+export default MockConnectPointEvent;

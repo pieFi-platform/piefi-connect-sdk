@@ -2,7 +2,7 @@ import IHttpConfig from "../http/http.config.interface";
 import BitEvent from "./entities/point-event";
 import BitResponse from "./entities/point-response";
 
-class PieFiConnectPointEvent {
+class ConnectPointEvent {
   private httpModule: IHttpConfig;
   constructor(httpModule: IHttpConfig){
     this.httpModule = httpModule;
@@ -14,4 +14,4 @@ class PieFiConnectPointEvent {
   }
 }
 
-export default PieFiConnectPointEvent;
+export default ConnectPointEvent;

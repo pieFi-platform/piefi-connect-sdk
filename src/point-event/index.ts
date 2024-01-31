@@ -1,11 +1,11 @@
 import BitEvent from "./entities/point-event";
 import BitResponse from "./entities/point-response";
-import PieFiConnectPointEvent from "./point-event";
-import MockPieFiConnectPointEvent from "./point-event.mock";
+import ConnectPointEvent from "./point-event";
+import MockConnectPointEvent from "./point-event.mock";
 
 export {
-  MockPieFiConnectPointEvent,
+  MockConnectPointEvent,
   BitEvent,
   BitResponse,
-  PieFiConnectPointEvent,
+  ConnectPointEvent
 }

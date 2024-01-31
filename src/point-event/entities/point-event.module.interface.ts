@@ -1,8 +1,8 @@
 import BitEvent from "./point-event";
 import BitResponse from "./point-response";
 
-interface IAwsmConnectPointEvent {
+interface IConnectPointEvent {
   rewardPoints: (data: BitEvent) => Promise<BitResponse>
 }
 
-export default IAwsmConnectPointEvent;
+export default IConnectPointEvent;

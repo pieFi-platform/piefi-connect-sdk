@@ -1,11 +1,11 @@
-import PieFiConnectAuth from "./auth";
-import MockPieFiConnectAuth from "./auth.mock";
+import ConnectUser from "./user";
+import MockConnectUser from "./user.mock";
 import AuthEntity from "./entities/auth.entity";
 import AuthResponse from "./entities/auth.response";
 
 export {
   AuthEntity,
   AuthResponse,
-  MockPieFiConnectAuth,
-  PieFiConnectAuth
+  MockConnectUser,
+  ConnectUser
 }

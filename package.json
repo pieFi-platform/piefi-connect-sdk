@@ -1,6 +1,6 @@
 {
   "name": "@piefi/awsm-connect-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "AWSM Connect SDK",
   "main": "dist/index.js",
   "repository": "https://github.com/pieFi-platform/piefi-connect-sdk",
